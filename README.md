@@ -1,4 +1,4 @@
-# week1
+# Boris Bikes
 
 This program will emulate a network of:
  - docking stations, 
