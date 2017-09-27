@@ -3,31 +3,40 @@ require 'docking_station'
 
 describe DockingStation do
 
-  it 'responds to release_bike' do # The instance is expected to respond to message release_bike.
-    expect(subject).to respond_to :release_bike
-  end
-
   it { is_expected.to respond_to :release_bike}
 
-  it 'releases working bikes' do
-    bike = subject.release_bike
-    expect(bike).to be_working
+  describe '#release_bike' do
+    it 'releases bikes' do
+      bike = Bike.new
+      subject.dock(bike)
+      expect(subject.release_bike).to eq bike
+    end
+
+    it 'raises an error when there are no bikes available' do
+      expect { subject.release_bike }.to raise_error 'No bikes available'
+    end
   end
 
-  it { is_expected.to respond_to(:dock).with(1).argument }
+  describe '#dock' do
+    it { is_expected.to respond_to(:dock).with(1).argument }
 
-  it 'docks bikes returned by user' do
-    yuliya_bike = subject.release_bike
-    expect(subject.dock(yuliya_bike)).to eq yuliya_bike
+    it 'docks bikes returned by user' do
+      yuliya_bike = Bike.new
+      expect(subject.dock(yuliya_bike)).to eq yuliya_bike
+    end
+
+    # it ' raises an error when the capacity is exceeded' do
+    #   bike = Bike.new
+    #   subject.dock(bike)
+    #   expect { subject.dock(bike) }.to raise_error 'Docking capacity exceeded'
+    # end
   end
-
   it {is_expected.to respond_to :bike }
 
-  it 'returns( kind of displays) docked bikes' do
+  it 'returns docked bikes' do
     bike = Bike.new
     subject.dock(bike)
     expect(subject.bike).to eq bike
   end
 
 end
-
