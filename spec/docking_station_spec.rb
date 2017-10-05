@@ -1,11 +1,19 @@
-# In spec/docking_station_spec.rb
 require 'docking_station'
 
 describe DockingStation do
-
-  it { is_expected.to respond_to :release_bike}
-  it {is_expected.to respond_to :bikes }
+  it { is_expected.to respond_to :release_bike }
   it { is_expected.to respond_to(:dock).with(1).argument }
+
+  describe 'upon initialization' do
+    subject { DockingStation.new }
+    let(:bike) { Bike.new }
+    it 'defaults capacity' do
+      described_class::DEFAULT_CAPACITY.times do
+        subject.dock(bike)
+      end
+      expect { subject.dock(bike) }.to raise_error 'Docking station full'
+    end
+  end
 
   describe '#release_bike' do
     it 'releases bikes' do
@@ -26,16 +34,8 @@ describe DockingStation do
     end
 
     it 'raises an error when full' do
-      DockingStation::DEFAULT_CAPACITY.times do
-        subject.dock Bike.new
-      end
-      expect { subject.dock(Bike.new) }.to raise_error 'Docking capacity exceeded'
+      subject.capacity.times { subject.dock Bike.new }
+      expect { subject.dock(Bike.new) }.to raise_error 'Docking station full'
     end
-  end
-
-  it 'returns docked bikes' do
-    bike = Bike.new
-    subject.dock(bike)
-    expect(subject.bikes).to eq [bike]
   end
 end
