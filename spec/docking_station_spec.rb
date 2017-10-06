@@ -2,7 +2,7 @@ require 'docking_station'
 
 describe DockingStation do
   let(:bike) { Bike.new }
-  
+
   def dock_a_bike
     subject.dock(bike)
   end
