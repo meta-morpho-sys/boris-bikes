@@ -20,7 +20,7 @@ class DockingStation
   end
 
   private
-  
+
   attr_reader :bikes
 
   def full?
