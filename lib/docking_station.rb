@@ -6,28 +6,38 @@ class DockingStation
 
   def initialize(capacity = DEFAULT_CAPACITY)
     @capacity = capacity
-    @bikes = []
+    @working_bikes = []
+    @broken_bikes = []
   end
 
   def release_bike
-    raise 'No bikes available' if empty?
-    @bikes.pop
+    raise 'No bikes available.' if empty?
+    raise 'No working bikes available.' if @working_bikes.empty?
+    @working_bikes.pop
   end
 
   def dock(bike)
-    raise 'Docking station full' if full?
-    @bikes << bike
+    raise 'Docking station is full.' if full?
+    if bike.broken?
+      @broken_bikes << bike
+    else
+      @working_bikes << bike
+    end
   end
 
   private
 
-  attr_reader :bikes
+  attr_reader :working_bikes, :broken_bikes
+
+  def num_bikes
+    @working_bikes.count + @broken_bikes.count
+  end
 
   def full?
-    @bikes.count >= capacity
+    num_bikes >= capacity
   end
 
   def empty?
-    @bikes.empty?
+    num_bikes.zero?
   end
 end

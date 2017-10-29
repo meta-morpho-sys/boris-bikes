@@ -1,7 +1,11 @@
 require 'docking_station'
 
 describe DockingStation do
-  let(:bike) { Bike.new }
+  let(:bike) { double :bike }
+  before(:each) do
+    allow(bike).to receive(:working?).and_return(true)
+    allow(bike).to receive(:broken?).and_return(false)
+  end
 
   def dock_a_bike
     subject.dock(bike)
@@ -14,9 +18,8 @@ describe DockingStation do
     it 'defaults capacity' do
       described_class::DEFAULT_CAPACITY.times do
         dock_a_bike
-        # subject.dock(bike)
       end
-      expect { dock_a_bike }.to raise_error 'Docking station full'
+      expect { dock_a_bike }.to raise_error 'Docking station is full.'
     end
 
     it ' accepts changes to capacity in initialization' do
@@ -26,13 +29,21 @@ describe DockingStation do
   end
 
   describe '#release_bike' do
-    it 'releases bikes' do
+
+    it 'releases working bikes' do
       dock_a_bike
-      expect(subject.release_bike).to eq bike
+      bike = subject.release_bike
+      expect(bike).to be_working
     end
 
     it 'raises an error when there are no bikes available' do
-      expect { subject.release_bike }.to raise_error 'No bikes available'
+      expect { subject.release_bike }.to raise_error 'No bikes available.'
+    end
+
+    it 'does not release broken bikes' do
+      allow(bike).to receive(:broken?).and_return(true)
+      dock_a_bike
+      expect { subject.release_bike }.to raise_error 'No working bikes available.'
     end
   end
 
@@ -43,7 +54,7 @@ describe DockingStation do
 
     it 'raises an error when full' do
       subject.capacity.times { dock_a_bike }
-      expect { dock_a_bike }.to raise_error 'Docking station full'
+      expect { dock_a_bike }.to raise_error 'Docking station is full.'
     end
   end
 end
