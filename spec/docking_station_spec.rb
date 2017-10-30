@@ -11,6 +11,11 @@ describe DockingStation do
     subject.dock(bike)
   end
 
+  def count_broken_bikes
+    allow(bike).to receive(:broken?).and_return(true)
+    described_class::BROKEN_BIKES_CAPACITY.times { dock_a_bike }
+  end
+
   it { is_expected.to respond_to :release_bike }
   it { is_expected.to respond_to(:dock).with(1).argument }
 
@@ -58,10 +63,14 @@ describe DockingStation do
   end
 
   describe 'managing of broken bikes' do
+
     it 'raises an error when there are more than five broken bikes' do
-      allow(bike).to receive(:broken?).and_return(true)
-      described_class::BROKEN_BIKES_CAPACITY.times { dock_a_bike }
+      count_broken_bikes
       expect { dock_a_bike }.to raise_error 'There are five broken bikes. Call the reparation team.'
+    end
+    it 'releases a broken bike to the van' do
+      count_broken_bikes
+      expect{subject.send_to_repair(1)}.to change{subject.broken_bikes.length}.from(5).to(4)
     end
   end
 end

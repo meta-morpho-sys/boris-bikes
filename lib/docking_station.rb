@@ -30,6 +30,10 @@ class DockingStation
     end
   end
 
+  def send_to_repair(num_bikes)
+    @broken_bikes.pop(num_bikes)
+  end
+
   private
 
   attr_reader :working_bikes
