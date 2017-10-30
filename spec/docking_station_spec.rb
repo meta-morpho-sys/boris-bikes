@@ -16,9 +16,7 @@ describe DockingStation do
 
   describe 'upon initialization' do
     it 'defaults capacity' do
-      described_class::DEFAULT_CAPACITY.times do
-        dock_a_bike
-      end
+      described_class::DEFAULT_CAPACITY.times { dock_a_bike }
       expect { dock_a_bike }.to raise_error 'Docking station is full.'
     end
 
@@ -43,7 +41,7 @@ describe DockingStation do
 
     it 'does not release broken bikes' do
       allow(bike).to receive(:broken?).and_return(true)
-s      dock_a_bike
+      dock_a_bike
       expect { subject.release_bike }.to raise_error 'No working bikes available.'
     end
   end
@@ -56,6 +54,14 @@ s      dock_a_bike
     it 'raises an error when full' do
       subject.capacity.times { dock_a_bike }
       expect { dock_a_bike }.to raise_error 'Docking station is full.'
+    end
+  end
+
+  describe 'managing of broken bikes' do
+    it 'raises an error when there are more than five broken bikes' do
+      allow(bike).to receive(:broken?).and_return(true)
+      described_class::BROKEN_BIKES_CAPACITY.times { dock_a_bike }
+      expect { dock_a_bike }.to raise_error 'There are five broken bikes. Call the reparation team.'
     end
   end
 end
