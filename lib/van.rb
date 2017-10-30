@@ -8,7 +8,7 @@ class Van
     @transported_bikes = []
   end
   def retrieve_bike(docking_station)
-    bike = docking_station.repair_bike
+    bike = docking_station.send_to_repair
     @transported_bikes << bike
   end
 end
