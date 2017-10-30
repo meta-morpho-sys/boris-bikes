@@ -12,4 +12,9 @@ describe Bike do
     subject.report_broken
     expect(subject).to be_broken
   end
+
+  it 'should not work if broken' do
+    subject.report_broken
+    expect(subject).not_to be_working
+  end
 end
