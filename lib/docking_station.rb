@@ -48,4 +48,3 @@ class DockingStation
     num_bikes.zero?
   end
 end
-
