@@ -9,7 +9,13 @@ class Van
   end
 
   def retrieve_bike(docking_station)
+    raise 'Van is full.' if full?
     bike = docking_station.send_to_repair
     @transported_bikes << bike
+  end
+
+  private
+  def full?
+    @transported_bikes.size >= VAN_CAPACITY
   end
 end
