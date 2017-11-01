@@ -18,7 +18,7 @@ describe Bike do
 
   it 'can be #reported_broken' do
     subject.report_broken
-    expect(subject).to be_broken
+    expect(subject.broken?).to equal true
   end
 
   it 'does not work if broken' do
