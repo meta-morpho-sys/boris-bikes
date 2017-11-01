@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-01T19:11:47+02:00">2017-11-01T19:11:47+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-01T20:01:58+02:00">2017-11-01T20:01:58+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.15%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.27
+         5.09
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>117</b> relevant lines. 
-    <span class="green"><b>116</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>124</b> relevant lines. 
+    <span class="green"><b>124</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#1291e75047a8a30d9a1a4f120464f535d56aa7c7" class="src_link" title="lib/bike.rb">lib/bike.rb</a></td>
-        <td class="green strong">90.91 %</td>
+        <td class="green strong">100.0 %</td>
         <td>21</td>
         <td>11</td>
-        <td>10</td>
-        <td>1</td>
-        <td>1.6</td>
+        <td>11</td>
+        <td>0</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#4157008fcb5a9a1c53f8255cba5ce94d3b1e1fc4" class="src_link" title="spec/bike_spec.rb">spec/bike_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
-        <td>12</td>
-        <td>12</td>
+        <td>33</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -129,11 +129,11 @@
         <div class="source_table" id="1291e75047a8a30d9a1a4f120464f535d56aa7c7">
   <div class="header">
     <h3>lib/bike.rb</h3>
-    <h4><span class="green">90.91 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>11</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -152,8 +152,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="3">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="8" data-linenumber="3">
+          <span class="hits">8</span>
           
           <code class="ruby">    @broken = false</code>
         </li>
@@ -197,13 +197,13 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">  def report_broken</code>
+          <code class="ruby">  def broken?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
           
-          <code class="ruby">    @broken = true</code>
+          <code class="ruby">    @broken</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -221,13 +221,13 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def broken?</code>
+          <code class="ruby">  def report_broken</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @broken</code>
+          <code class="ruby">    @broken = true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -248,8 +248,8 @@
           <code class="ruby">  def report_fixed</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">    @broken = false</code>
         </li>
@@ -710,8 +710,8 @@
     <h3>spec/bike_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -758,13 +758,13 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;is #working&#39; do</code>
+          <code class="ruby">  it &#39;is working when initialized&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(subject).to be_working</code>
+          <code class="ruby">    expect(subject).not_to be_broken</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -782,58 +782,136 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;can be reported broken&#39; do</code>
+          <code class="ruby">  it &#39;is #working?&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    subject.report_broken</code>
+          <code class="ruby">    expect(subject.working?).to eq true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">    expect(subject).to be_broken</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  it &#39;is #broken?&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;should not work if broken&#39; do</code>
+          <code class="ruby">    expect(subject.broken?).to eq false</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    subject.report_broken</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(subject).not_to be_working</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;can be #reported_broken&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    subject.report_broken</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(subject).to be_broken</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;does not work if broken&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    subject.report_broken</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(subject).not_to be_working</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;can be #reported_fixed&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    subject.report_fixed</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(subject).not_to be_broken</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">end</code>
