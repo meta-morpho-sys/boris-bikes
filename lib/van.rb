@@ -15,9 +15,9 @@ class Van
     @transported_bikes << bike
   end
 
-  def deliver_bike(num, destination)
-    @transported_bikes.pop(num)
-
+  def deliver_bike(num_bikes, destination)
+    bikes = @transported_bikes.pop(num_bikes)
+    destination.accept_to_fix(bikes)
   end
 
   private

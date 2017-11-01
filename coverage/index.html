@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-01T23:52:38+02:00">2017-11-01T23:52:38+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-01T23:57:28+02:00">2017-11-01T23:57:28+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.09
+         5.08
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>140</b> relevant lines. 
-    <span class="green"><b>140</b> lines covered</span> and
+    <b>141</b> relevant lines. 
+    <span class="green"><b>141</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -74,10 +74,10 @@
         <td class="strong"><a href="#e425b5a51edb2a1ca7bd3ae8ed3d90cdcca2f656" class="src_link" title="lib/van.rb">lib/van.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>27</td>
-        <td>16</td>
-        <td>16</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>2.8</td>
       </tr>
       
     </tbody>
@@ -595,8 +595,8 @@
     <h3>lib/van.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -709,19 +709,19 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  def deliver_bike(num, destination)</code>
+          <code class="ruby">  def deliver_bike(num_bikes, destination)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">    @transported_bikes.pop(num)</code>
+          <code class="ruby">    bikes = @transported_bikes.pop(num_bikes)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    destination.accept_to_fix(bikes)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -1531,8 +1531,8 @@
           <code class="ruby">  let(:bike) { double :bike }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
           <code class="ruby">  let(:garage) { double :garage}</code>
         </li>
@@ -1555,64 +1555,64 @@
           <code class="ruby">    allow(docking_station).to receive(:send_to_repair).and_return(bike)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    allow(garage).to receive(:accept_to_fix).and_return(bike)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  it &#39;has capacity&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="17">
+        <li class="covered" data-hits="6" data-linenumber="18">
           <span class="hits">6</span>
           
           <code class="ruby">    described_class::VAN_CAPACITY.times {retrieve_bike}</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
+        <li class="covered" data-hits="2" data-linenumber="19">
           <span class="hits">2</span>
           
           <code class="ruby">    expect {retrieve_bike}.to raise_error &#39;Van is full.&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">  context &#39;when managing a broken bike&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;retrieves the bike from the docking station&#39; do</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">      allow(docking_station).to receive(:send_to_repair).and_return(bike)</code>
+          <code class="ruby">    it &#39;retrieves the bike from the docking station&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">

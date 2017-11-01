@@ -11,6 +11,7 @@ describe Van do
 
   before(:each) do
     allow(docking_station).to receive(:send_to_repair).and_return(bike)
+    allow(garage).to receive(:accept_to_fix).and_return(bike)
   end
 
   it 'has capacity' do
@@ -20,7 +21,6 @@ describe Van do
 
   context 'when managing a broken bike' do
     it 'retrieves the bike from the docking station' do
-      allow(docking_station).to receive(:send_to_repair).and_return(bike)
       expect(retrieve_bike).to eq [bike]
     end
     it 'delivers the bike to the garage' do
