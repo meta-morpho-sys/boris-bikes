@@ -189,6 +189,35 @@
         null,
         null
       ],
+      "/Users/astarte/MAcourse/boris-bikes/spec/garagee_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/astarte/MAcourse/boris-bikes/lib/garage.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/astarte/MAcourse/boris-bikes/spec/van_spec.rb": [
         1,
         null,
@@ -217,8 +246,9 @@
         null,
         1,
         4,
-        4,
-        null,
+        1,
+        1,
+        2,
         null,
         null,
         null
@@ -247,12 +277,13 @@
         null,
         null,
         1,
+        null,
         1,
         10,
         null,
         null
       ]
     },
-    "timestamp": 1509573448
+    "timestamp": 1509697813
   }
 }

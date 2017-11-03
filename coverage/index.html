@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-01T23:57:28+02:00">2017-11-01T23:57:28+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-03T10:30:13+02:00">2017-11-03T10:30:13+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.08
+         4.64
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>6</b> files in total.
-    <b>141</b> relevant lines. 
-    <span class="green"><b>141</b> lines covered</span> and
+    <b>8</b> files in total.
+    <b>158</b> relevant lines. 
+    <span class="green"><b>158</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -71,9 +71,19 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#ce001198a01932a68d42eb0ecf58ce75fc1ba4e0" class="src_link" title="lib/garage.rb">lib/garage.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>8</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#e425b5a51edb2a1ca7bd3ae8ed3d90cdcca2f656" class="src_link" title="lib/van.rb">lib/van.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
+        <td>28</td>
         <td>17</td>
         <td>17</td>
         <td>0</td>
@@ -101,13 +111,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#a7f40d94e2f0ac0ca4c115ab4172035661d45cae" class="src_link" title="spec/garagee_spec.rb">spec/garagee_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>17</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>1.2</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#9c652d11a5df09f77e22b0179cabd37cd588de35" class="src_link" title="spec/van_spec.rb">spec/van_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>32</td>
-        <td>19</td>
-        <td>19</td>
+        <td>33</td>
+        <td>21</td>
+        <td>21</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>2.5</td>
       </tr>
       
     </tbody>
@@ -590,6 +610,73 @@
 </div>
 
       
+        <div class="source_table" id="ce001198a01932a68d42eb0ecf58ce75fc1ba4e0">
+  <div class="header">
+    <h3>lib/garage.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Garage</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @bikes_to_fix = []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def accept_to_fix(bike)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @bikes_to_fix &lt;&lt; bike</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="e425b5a51edb2a1ca7bd3ae8ed3d90cdcca2f656">
   <div class="header">
     <h3>lib/van.rb</h3>
@@ -742,25 +829,31 @@
           <code class="ruby">  private</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  def full?</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="25">
+        <li class="covered" data-hits="10" data-linenumber="26">
           <span class="hits">10</span>
           
           <code class="ruby">    @transported_bikes.size &gt;= VAN_CAPACITY</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
@@ -1463,13 +1556,134 @@
 </div>
 
       
+        <div class="source_table" id="a7f40d94e2f0ac0ca4c115ab4172035661d45cae">
+  <div class="header">
+    <h3>spec/garagee_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;garage&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Garage do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:van) { double :van}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:bike) { double :bike }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(van).to receive(:deliver_bike).with(1, subject).and_return(bike)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;fixes broken bikes&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;accepts bikes to fix&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      van.deliver_bike(1,subject)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.accept_to_fix(bike)).to eq [bike]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="9c652d11a5df09f77e22b0179cabd37cd588de35">
   <div class="header">
     <h3>spec/van_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1582,13 +1796,13 @@
         <li class="covered" data-hits="6" data-linenumber="18">
           <span class="hits">6</span>
           
-          <code class="ruby">    described_class::VAN_CAPACITY.times {retrieve_bike}</code>
+          <code class="ruby">    described_class::VAN_CAPACITY.times { retrieve_bike }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="19">
           <span class="hits">2</span>
           
-          <code class="ruby">    expect {retrieve_bike}.to raise_error &#39;Van is full.&#39;</code>
+          <code class="ruby">    expect { retrieve_bike }.to raise_error &#39;Van is full.&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
@@ -1639,31 +1853,37 @@
           <code class="ruby">      3.times { retrieve_bike }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="28">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
           
-          <code class="ruby">      expect{ subject.deliver_bike(2, garage) }.to change { subject.transported_bikes.size }.by(-2)</code>
+          <code class="ruby">      expect do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">          subject.deliver_bike(2, garage)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="covered" data-hits="2" data-linenumber="30">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        end.to change { subject.transported_bikes.size }.by(-2)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">end</code>
