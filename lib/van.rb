@@ -21,6 +21,7 @@ class Van
   end
 
   private
+
   def full?
     @transported_bikes.size >= VAN_CAPACITY
   end
