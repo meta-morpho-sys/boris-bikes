@@ -21,7 +21,7 @@ class DockingStation
   def dock(bike)
     raise 'Docking station is full.' if full?
     if bike.broken?
-      raise 'Call the repair team.' if @broken_bikes.count == BROKEN_BIKES_CAPACITY
+      raise 'Call the repair team.' if broken_bikes_full?
       @broken_bikes << bike
     else
       @working_bikes << bike
@@ -46,5 +46,9 @@ class DockingStation
 
   def empty?
     num_bikes.zero?
+  end
+
+  def broken_bikes_full?
+    @broken_bikes.count == BROKEN_BIKES_CAPACITY
   end
 end

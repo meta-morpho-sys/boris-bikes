@@ -47,7 +47,9 @@ describe DockingStation do
 
     it 'does not release broken bikes' do
       dock(broken_bike)
-      expect { subject.release_bike }.to raise_error 'No working bikes available.'
+      expect do
+        subject.release_bike
+      end.to raise_error 'No working bikes available.'
     end
   end
 
@@ -70,7 +72,9 @@ describe DockingStation do
       expect { dock(broken_bike) }.to raise_error 'Call the repair team.'
     end
     it 'releases a broken bike to the van' do
-      expect { subject.send_to_repair(1) }.to change { subject.broken_bikes.size }.by(-1)
+      expect do
+        subject.send_to_repair(1)
+      end.to change { subject.broken_bikes.size }.by(-1)
     end
   end
 end
