@@ -1,5 +1,6 @@
 require_relative 'bike'
 
+# Centralizes the process of releasing and retrieving. Handles broken bikes.
 class DockingStation
   DEFAULT_CAPACITY = 20
   BROKEN_BIKES_CAPACITY = 5
