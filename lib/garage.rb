@@ -1,3 +1,4 @@
+# Interacts with Van class, accepts and fixes broken bikes.
 class Garage
   def initialize
     @bikes_to_fix = []
