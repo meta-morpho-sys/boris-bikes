@@ -1,10 +1,10 @@
 require 'simplecov'
 require 'simplecov-console'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-                                                                   SimpleCov::Formatter::Console,
-                                                                   SimpleCov::Formatter::HTMLFormatter
-                                                               ])
+SCF = SimpleCov::Formatter
+formatters = [SCF::Console, SCF::HTMLFormatter]
+SimpleCov.formatter = SCF::MultiFormatter.new(formatters)
+
 SimpleCov.start
 
 RSpec.configure do |config|
