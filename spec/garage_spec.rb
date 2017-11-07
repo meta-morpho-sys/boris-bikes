@@ -2,15 +2,23 @@ require 'garage'
 
 describe Garage do
   let(:van) { double :van }
-  let(:bike) { double :bike }
+  let(:broken_bike) { double :bike }
+  let(:fixed_bike) { double :bike }
+
   before(:each) do
-    expect(van).to receive(:deliver_bike).with(2, subject).and_return(bike)
+    allow(broken_bike).to receive(:broken?).and_return(true)
+    allow(fixed_bike).to receive(:fix).and_return(false)
   end
 
-  describe 'fixes broken bikes' do
+  describe 'deals with broken bikes' do
     it 'accepts bikes to fix' do
-      van.deliver_bike(2, subject)
-      expect(subject.accept_to_fix(bike)).to eq [bike]
+      expect(subject.accept_to_fix(broken_bike)).to eq [broken_bike]
+    end
+
+    it 'fixes a broken bike' do
+      subject.accept_to_fix broken_bike
+      allow(broken_bike).to receive(:fix)
+      subject.fix_bikes
     end
   end
 end

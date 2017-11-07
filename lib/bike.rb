@@ -1,3 +1,5 @@
+
+# Represents a bike that can be working or broken
 class Bike
   def initialize
     @broken = false
@@ -15,7 +17,7 @@ class Bike
     @broken = true
   end
 
-  def report_fixed
+  def fix
     @broken = false
   end
 end

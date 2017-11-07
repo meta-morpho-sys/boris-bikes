@@ -27,7 +27,7 @@ describe Bike do
   end
 
   it 'can be #reported_fixed' do
-    subject.report_fixed
+    subject.fix
     expect(subject).not_to be_broken
   end
 end

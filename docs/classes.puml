@@ -1,0 +1,45 @@
+@startuml
+
+interface Destination {
+    accept(bikes)
+}
+
+class Garage {
+ Accepts bikes for fixing.
+ Manages sending vans to collect and return
+ bikes from DockingStations
+====
+
+    fix(bikes)
+    send(van, docking_station)
+    request_repair(docking_station)
+
+}
+
+class Bike {
+    report_broken()
+    fix()
+    working?()
+    broken?()
+}
+
+class Van {
+    deliver(bikes, destination)
+    retrieve_bikes(docking_station)
+}
+
+class DockingStation {
+    capacity
+    broken_bikes
+    garage
+    dock(bike)
+    release_bike()
+}
+
+Destination <|-- Garage
+Destination <|-- DockingStation
+
+
+Van .. DockingStation
+Van .. Garage
+@enduml

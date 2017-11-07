@@ -1,6 +1,6 @@
-require_relative 'bike'
 require_relative 'docking_station'
 
+# Transports Bikes and retrieves them from DockingStations
 class Van
   VAN_CAPACITY = 5
   attr_reader :transported_bikes
