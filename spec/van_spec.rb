@@ -10,7 +10,7 @@ describe Van do
   let(:garage) { double :garage }
 
   before(:each) do
-    allow(docking_station).to receive(:send_to_repair).and_return(bike)
+    allow(docking_station).to receive(:request_repair).and_return(bike)
     allow(garage).to receive(:accept_to_fix).and_return(bike)
   end
 

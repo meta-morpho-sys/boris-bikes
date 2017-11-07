@@ -11,7 +11,7 @@ class Van
 
   def retrieve_bike(docking_station)
     raise 'Van is full.' if full?
-    bike = docking_station.send_to_repair
+    bike = docking_station.request_repair
     @transported_bikes << bike
   end
 
