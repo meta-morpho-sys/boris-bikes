@@ -29,7 +29,7 @@ class DockingStation
     end
   end
 
-  def send_to_repair(num_bikes)
+  def request_repair(num_bikes)
     @broken_bikes.pop(num_bikes)
   end
 
