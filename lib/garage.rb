@@ -16,4 +16,8 @@ class Garage
     fixing = @bikes_to_fix.pop(num)
     @fixed_bikes += fixing.map(&:fix)
   end
+
+  def send_back(num_bikes)
+    @fixed_bikes.pop(num_bikes)
+  end
 end
