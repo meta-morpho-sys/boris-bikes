@@ -23,9 +23,14 @@ class Van
     @transported_bikes += bikes
   end
 
-  def deliver_bike(num_bikes, destination)
+  def deliver_to_garage(num_bikes, destination)
     bikes = @transported_bikes.pop(num_bikes)
     destination.accept_to_fix(bikes)
+  end
+
+  def deliver_to_docking_station(num_bikes, destination)
+    bikes = @transported_bikes.pop(num_bikes)
+    bikes.each { |b| destination.dock(b) }
   end
 
   private

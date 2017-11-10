@@ -37,7 +37,7 @@ describe DockingStation do
   describe '#release_bike' do
     it 'releases working bikes' do
       dock(working_bike)
-      bike = subject.release_bike
+      p bike = subject.release_bike
       expect(bike).to be_working
     end
 
