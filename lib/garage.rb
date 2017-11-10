@@ -10,7 +10,6 @@ class Garage
 
   # Accepts an array of bikes to fix
   def accept_to_fix(bikes)
-    p 'in garage accept to fix'
     @bikes_to_fix += bikes
   end
 
