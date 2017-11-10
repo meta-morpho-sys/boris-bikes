@@ -19,6 +19,10 @@ class DockingStation
     @working_bikes.pop
   end
 
+  def accept(bikes)
+    bikes.each { |b| dock(b) }
+  end
+
   def dock(bike)
     raise 'Docking station is full.' if full?
     if bike.broken?

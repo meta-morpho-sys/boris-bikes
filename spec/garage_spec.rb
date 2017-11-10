@@ -12,11 +12,11 @@ describe Garage do
 
   context 'when dealing with broken bikes' do
     it 'accepts bikes to fix' do
-      expect(subject.accept_to_fix([broken_bike])).to eq [broken_bike]
+      expect(subject.accept([broken_bike])).to eq [broken_bike]
     end
 
     it 'fixes a broken bike' do
-      subject.accept_to_fix [broken_bike]
+      subject.accept [broken_bike]
       expect(broken_bike).to receive(:fix).and_return(fixed_bike)
       subject.fix_bikes
       expect(subject.bikes_to_fix).to eq []
@@ -24,7 +24,7 @@ describe Garage do
     end
 
     it 'fixes multiple bikes' do
-      5.times { subject.accept_to_fix [broken_bike] }
+      5.times { subject.accept [broken_bike] }
       expect(broken_bike).to receive(:fix).and_return(fixed_bike)
       p subject.fix_bikes
     end
