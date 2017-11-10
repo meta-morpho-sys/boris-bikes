@@ -1,7 +1,7 @@
 require 'van'
 
 def retrieve_bike(num, source)
-  subject.retrieve_bike(num, source)
+  subject.retrieve_from_docking_station(num, source)
 end
 
 describe Van do
@@ -12,6 +12,7 @@ describe Van do
   before(:each) do
     allow(docking_station).to receive(:request_repair).and_return([bike])
     allow(garage).to receive(:accept_to_fix).and_return([bike])
+    allow(garage).to receive(:send_back).and_return([bike])
   end
 
   it 'has capacity' do
@@ -31,8 +32,8 @@ describe Van do
     end
   end
   context 'when managing a fixed bike' do
-    xit 'retrieves the bike from the garage' do
-      expect(retrieve_bike(1, garage)).to eq [bike]
+    it 'retrieves the bike from the garage' do
+      expect(subject.retrieve_from_garage(1, garage)).to eq [bike]
     end
   end
 end

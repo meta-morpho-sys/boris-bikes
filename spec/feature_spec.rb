@@ -14,8 +14,10 @@ ds.dock(bike)
 ds.dock(broken_bike)
 ds.dock(broken_bike2)
 
-van.retrieve_bike(1, ds)
+van.retrieve_from_docking_station(1, ds)
 van.deliver_bike(1, gar)
 
 gar.fix_bikes
+gar.send_back(1)
 
+van.retrieve_from_garage(1, gar)

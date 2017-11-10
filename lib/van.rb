@@ -11,14 +11,15 @@ class Van
     @transported_bikes = []
   end
 
-  def retrieve_bike(num_bikes, source)
+  def retrieve_from_docking_station(num_bikes, source)
     raise 'Van is full.' if full?
-    # case source
-    # when docking_station
     bikes = source.request_repair(num_bikes)
-    # else
-    #   bike = source.send_back
-    # end
+    @transported_bikes += bikes
+  end
+
+  def retrieve_from_garage(num_bikes, source)
+    raise 'Van is full.' if full?
+    bikes = source.send_back(num_bikes)
     @transported_bikes += bikes
   end
 
