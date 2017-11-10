@@ -8,10 +8,14 @@ class Garage
     @fixed_bikes = []
   end
 
-  def accept_to_fix(bike)
-    @bikes_to_fix << bike
+  # Accepts an array of bikes to fix
+  def accept_to_fix(bikes)
+    p 'in garage accept to fix'
+    @bikes_to_fix += bikes
   end
 
+  # Accepts an array of bikes
+  # Calls the #fix of Bike to change the bike state from broken to working.
   def fix_bikes(num = 1)
     fixing = @bikes_to_fix.pop(num)
     @fixed_bikes += fixing.map(&:fix)
