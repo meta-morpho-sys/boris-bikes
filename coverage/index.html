@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-10T23:45:25+00:00">2017-11-10T23:45:25+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-10T23:59:40+00:00">2017-11-10T23:59:40+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.22
+         4.29
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>9</b> files in total.
-    <b>225</b> relevant lines. 
-    <span class="green"><b>225</b> lines covered</span> and
+    <b>221</b> relevant lines. 
+    <span class="green"><b>221</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#e425b5a51edb2a1ca7bd3ae8ed3d90cdcca2f656" class="src_link" title="lib/van.rb">lib/van.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>36</td>
-        <td>21</td>
-        <td>21</td>
+        <td>30</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
-        <td>4.5</td>
+        <td>5.5</td>
       </tr>
       
       <tr>
@@ -552,7 +552,7 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">  def request_repair(num_bikes)</code>
+          <code class="ruby">  def ship(num_bikes)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="37">
@@ -847,7 +847,7 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">  def send_back(num_bikes)</code>
+          <code class="ruby">  def ship(num_bikes)</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="24">
@@ -878,8 +878,8 @@
     <h3>lib/van.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -968,23 +968,23 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def retrieve_from_docking_station(num_bikes, source)</code>
+          <code class="ruby">  def retrieve(num_bikes, source)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="15">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="18" data-linenumber="15">
+          <span class="hits">18</span>
           
           <code class="ruby">    raise &#39;Van is full.&#39; if full?</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="16">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="17" data-linenumber="16">
+          <span class="hits">17</span>
           
-          <code class="ruby">    bikes = source.request_repair(num_bikes)</code>
+          <code class="ruby">    bikes = source.ship(num_bikes)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="17">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="17" data-linenumber="17">
+          <span class="hits">17</span>
           
           <code class="ruby">    @transported_bikes += bikes</code>
         </li>
@@ -1004,55 +1004,55 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def retrieve_from_garage(num_bikes, source)</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="21">
-          <span class="hits">7</span>
-          
-          <code class="ruby">    raise &#39;Van is full.&#39; if full?</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="22">
-          <span class="hits">7</span>
-          
-          <code class="ruby">    bikes = source.send_back(num_bikes)</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="23">
-          <span class="hits">7</span>
-          
-          <code class="ruby">    @transported_bikes += bikes</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
           <code class="ruby">  def deliver(num_bikes, destination)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="27">
+        <li class="covered" data-hits="4" data-linenumber="21">
           <span class="hits">4</span>
           
           <code class="ruby">    bikes = @transported_bikes.pop(num_bikes)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="28">
+        <li class="covered" data-hits="4" data-linenumber="22">
           <span class="hits">4</span>
           
           <code class="ruby">    destination.accept(bikes)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def full?</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="28">
+          <span class="hits">18</span>
+          
+          <code class="ruby">    @transported_bikes.size &gt;= VAN_CAPACITY</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
@@ -1062,42 +1062,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def full?</code>
-        </li>
-      
-        <li class="covered" data-hits="18" data-linenumber="34">
-          <span class="hits">18</span>
-          
-          <code class="ruby">    @transported_bikes.size &gt;= VAN_CAPACITY</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">end</code>
@@ -1792,7 +1756,7 @@
         <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
-          <code class="ruby">        subject.request_repair(1)</code>
+          <code class="ruby">        subject.ship(1)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="77">
@@ -1937,7 +1901,7 @@
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">van.retrieve_from_docking_station(1, ds)</code>
+          <code class="ruby">van.retrieve(1, ds)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
@@ -1961,7 +1925,7 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">gar.send_back(1)</code>
+          <code class="ruby">gar.ship(1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -1973,7 +1937,7 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">van.retrieve_from_garage(1, gar)</code>
+          <code class="ruby">van.retrieve(1, gar)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
@@ -2208,7 +2172,7 @@
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">      subject.send_back 1</code>
+          <code class="ruby">      subject.ship 1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
@@ -2275,7 +2239,7 @@
         <li class="covered" data-hits="10" data-linenumber="4">
           <span class="hits">10</span>
           
-          <code class="ruby">  subject.retrieve_from_docking_station(num, source)</code>
+          <code class="ruby">  subject.retrieve(num, source)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -2299,7 +2263,7 @@
         <li class="covered" data-hits="6" data-linenumber="8">
           <span class="hits">6</span>
           
-          <code class="ruby">  subject.retrieve_from_garage(1, garage)</code>
+          <code class="ruby">  subject.retrieve(1, garage)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -2353,7 +2317,7 @@
         <li class="covered" data-hits="5" data-linenumber="17">
           <span class="hits">5</span>
           
-          <code class="ruby">    allow(docking_station).to receive(:request_repair).and_return([bike])</code>
+          <code class="ruby">    allow(docking_station).to receive(:ship).and_return([bike])</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="18">
@@ -2371,7 +2335,7 @@
         <li class="covered" data-hits="5" data-linenumber="20">
           <span class="hits">5</span>
           
-          <code class="ruby">    allow(garage).to receive(:send_back).and_return([bike])</code>
+          <code class="ruby">    allow(garage).to receive(:ship).and_return([bike])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">

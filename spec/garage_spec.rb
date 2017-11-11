@@ -32,7 +32,7 @@ describe Garage do
 
   context 'when handling fixed bikes' do
     it 'sends the fixed bikes back to docking station' do
-      subject.send_back 1
+      subject.ship 1
       expect(subject.fixed_bikes).to eq []
     end
   end

@@ -33,8 +33,12 @@ class DockingStation
     end
   end
 
-  def request_repair(num_bikes)
-    @broken_bikes.pop(num_bikes)
+  def arr_to_ship
+    @broken_bikes
+  end
+
+  def ship(num_bikes)
+    arr_to_ship.pop(num_bikes)
   end
 
   private

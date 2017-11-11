@@ -1,11 +1,11 @@
 require 'van'
 
 def retrieve_bike(num, source)
-  subject.retrieve_from_docking_station(num, source)
+  subject.retrieve(num, source)
 end
 
 def collect_bike
-  subject.retrieve_from_garage(1, garage)
+  subject.retrieve(1, garage)
 end
 
 describe Van do
@@ -14,10 +14,10 @@ describe Van do
   let(:garage) { double :garage }
 
   before(:each) do
-    allow(docking_station).to receive(:request_repair).and_return([bike])
+    allow(docking_station).to receive(:ship).and_return([bike])
     allow(docking_station).to receive(:accept).and_return([bike])
     allow(garage).to receive(:accept).and_return([bike])
-    allow(garage).to receive(:send_back).and_return([bike])
+    allow(garage).to receive(:ship).and_return([bike])
   end
 
   it 'has capacity' do

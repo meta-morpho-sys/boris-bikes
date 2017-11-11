@@ -73,7 +73,7 @@ describe DockingStation do
     end
     it 'releases a broken bike to the van' do
       expect do
-        subject.request_repair(1)
+        subject.ship(1)
       end.to change { subject.broken_bikes.size }.by(-1)
     end
   end
