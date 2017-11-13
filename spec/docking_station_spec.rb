@@ -11,7 +11,7 @@ describe DockingStation do
   end
 
   def dock(bike)
-    subject.dock(bike)
+    subject.accept([bike])
   end
 
   def fill_with_broken_bikes
@@ -19,7 +19,7 @@ describe DockingStation do
   end
 
   it { is_expected.to respond_to :release_bike }
-  it { is_expected.to respond_to(:dock).with(1).argument }
+  it { is_expected.to respond_to(:accept).with(1).argument }
 
   describe 'upon initialization' do
     it 'defaults with capacity' do

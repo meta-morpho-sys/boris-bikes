@@ -23,6 +23,14 @@ class DockingStation
     bikes.each { |b| dock(b) }
   end
 
+  def ship(num_bikes)
+    @broken_bikes.pop(num_bikes)
+  end
+
+  private
+
+  attr_reader :working_bikes
+
   def dock(bike)
     raise 'Docking station is full.' if full?
     if bike.broken?
@@ -32,18 +40,6 @@ class DockingStation
       @working_bikes << bike
     end
   end
-
-  def arr_to_ship
-    @broken_bikes
-  end
-
-  def ship(num_bikes)
-    arr_to_ship.pop(num_bikes)
-  end
-
-  private
-
-  attr_reader :working_bikes
 
   def num_bikes
     @working_bikes.count + @broken_bikes.count

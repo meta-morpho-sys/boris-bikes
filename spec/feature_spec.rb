@@ -10,9 +10,9 @@ ds = DockingStation.new
 gar = Garage.new
 van = Van.new
 
-ds.dock(bike)
-ds.dock(broken_bike)
-ds.dock(broken_bike2)
+ds.accept([bike])
+ds.accept([broken_bike])
+ds.accept([broken_bike2])
 
 van.retrieve(1, ds)
 van.deliver(1, gar)
