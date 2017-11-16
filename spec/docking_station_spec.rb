@@ -18,7 +18,7 @@ describe DockingStation do
     described_class::BROKEN_BIKES_CAPACITY.times { dock(broken_bike) }
   end
 
-  it { is_expected.to respond_to :release_bike }
+  it { is_expected.to respond_to(:release).with(1).argument }
   it { is_expected.to respond_to(:accept).with(1).argument }
 
   describe 'upon initialization' do
@@ -36,19 +36,21 @@ describe DockingStation do
 
   describe '#release_bike' do
     it 'releases working bikes' do
-      dock(working_bike)
-      p bike = subject.release_bike
-      expect(bike).to be_working
+      4.times { dock(working_bike) }
+      bikes = subject.release 4
+      expect(bikes.size).to eq(4)
+      expect(bikes.map(&:working?).all?).to eq(true)
     end
 
     it 'raises an error when there are no bikes available' do
-      expect { subject.release_bike }.to raise_error 'No bikes available.'
+      expect { subject.release [working_bike] }
+        .to raise_error 'No bikes available.'
     end
 
     it 'does not release broken bikes' do
       dock(broken_bike)
       expect do
-        subject.release_bike
+        subject.release [broken_bike]
       end.to raise_error 'No working bikes available.'
     end
   end

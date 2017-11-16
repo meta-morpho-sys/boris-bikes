@@ -13,6 +13,9 @@ van = Van.new
 ds.accept([bike])
 ds.accept([broken_bike])
 ds.accept([broken_bike2])
+cust_bikes = ds.release 1
+cust_bike = cust_bikes[0]
+p cust_bike.working?
 
 van.retrieve(1, ds)
 van.deliver(1, gar)

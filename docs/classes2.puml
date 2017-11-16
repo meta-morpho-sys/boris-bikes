@@ -1,18 +1,10 @@
 @startuml
 
-class Bike {
-report_broken()
-fix()
-working?()
-broken?()
-}
-
 class DockingStation {
 capacity
 broken_bikes
-dock(bike)
 accept(bikes)
-release_bike()
+release(num_bikes)
 ship(num_bikes)
 }
 
@@ -28,6 +20,13 @@ class Van {
 transported_bikes
 retrieve(num_bikes, source)
 deliver(num_bikes, destination)
+}
+
+class Bike {
+report_broken()
+fix()
+working?()
+broken?()
 }
 
 @enduml

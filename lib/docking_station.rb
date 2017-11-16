@@ -13,16 +13,20 @@ class DockingStation
     @broken_bikes = []
   end
 
-  def release_bike
-    raise 'No bikes available.' if empty?
-    raise 'No working bikes available.' if @working_bikes.empty?
-    @working_bikes.pop
-  end
-
+  # Takes an array of bikes and sorts them to broken and working arrays using
+  # the private `dock` method
   def accept(bikes)
     bikes.each { |b| dock(b) }
   end
 
+  # takes an integer and returns an array of released bikes
+  def release(num)
+    raise 'No bikes available.' if empty?
+    raise 'No working bikes available.' if @working_bikes.empty?
+    @working_bikes.pop(num)
+  end
+
+  # takes an integer and returns an array of shipped bikes
   def ship(num_bikes)
     @broken_bikes.pop(num_bikes)
   end
