@@ -20,10 +20,13 @@ class DockingStation
   end
 
   # takes an integer and returns an array of released bikes
-  def release(num)
+  # TODO Write a new raise as specified below. Write the test first!
+  # raise "Not enough working bikes available (requested #{num}"\
+  # "but have #{@working_bikes.count})" if not_enough?
+  def release(num_bikes)
     raise 'No bikes available.' if empty?
     raise 'No working bikes available.' if @working_bikes.empty?
-    @working_bikes.pop(num)
+    @working_bikes.pop(num_bikes  )
   end
 
   # takes an integer and returns an array of shipped bikes

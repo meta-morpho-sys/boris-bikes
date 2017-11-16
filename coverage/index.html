@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-16T14:07:12+00:00">2017-11-16T14:07:12+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-16T14:57:05+00:00">2017-11-16T14:57:05+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.03
+         4.93
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>34</td>
         <td>34</td>
         <td>0</td>
-        <td>16.4</td>
+        <td>15.9</td>
       </tr>
       
       <tr>
@@ -103,11 +103,11 @@
       <tr>
         <td class="strong"><a href="#408e2b6184dbfd83e74bd85df2f661fa19b2bf26" class="src_link" title="spec/docking_station_spec.rb">spec/docking_station_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>87</td>
+        <td>84</td>
         <td>50</td>
         <td>50</td>
         <td>0</td>
-        <td>4.6</td>
+        <td>4.5</td>
       </tr>
       
       <tr>
@@ -447,8 +447,8 @@
           <code class="ruby">  def accept(bikes)</code>
         </li>
       
-        <li class="covered" data-hits="131" data-linenumber="19">
-          <span class="hits">131</span>
+        <li class="covered" data-hits="129" data-linenumber="19">
+          <span class="hits">129</span>
           
           <code class="ruby">    bikes.each { |b| dock(b) }</code>
         </li>
@@ -474,11 +474,11 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">  def release(num)</code>
+          <code class="ruby">  def release(num_bikes)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="24">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="24">
+          <span class="hits">3</span>
           
           <code class="ruby">    raise &#39;No bikes available.&#39; if empty?</code>
         </li>
@@ -492,7 +492,7 @@
         <li class="covered" data-hits="2" data-linenumber="26">
           <span class="hits">2</span>
           
-          <code class="ruby">    @working_bikes.pop(num)</code>
+          <code class="ruby">    @working_bikes.pop(num_bikes)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -567,26 +567,26 @@
           <code class="ruby">  def dock(bike)</code>
         </li>
       
-        <li class="covered" data-hits="65" data-linenumber="39">
-          <span class="hits">65</span>
+        <li class="covered" data-hits="64" data-linenumber="39">
+          <span class="hits">64</span>
           
           <code class="ruby">    raise &#39;Docking station is full.&#39; if full?</code>
         </li>
       
-        <li class="covered" data-hits="63" data-linenumber="40">
-          <span class="hits">63</span>
+        <li class="covered" data-hits="62" data-linenumber="40">
+          <span class="hits">62</span>
           
           <code class="ruby">    if bike.broken?</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="41">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="14" data-linenumber="41">
+          <span class="hits">14</span>
           
           <code class="ruby">      raise &#39;Call the repair team.&#39; if broken_bikes_full?</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="42">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="13" data-linenumber="42">
+          <span class="hits">13</span>
           
           <code class="ruby">      @broken_bikes &lt;&lt; bike</code>
         </li>
@@ -597,8 +597,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="46" data-linenumber="44">
-          <span class="hits">46</span>
+        <li class="covered" data-hits="48" data-linenumber="44">
+          <span class="hits">48</span>
           
           <code class="ruby">      @working_bikes &lt;&lt; bike</code>
         </li>
@@ -627,8 +627,8 @@
           <code class="ruby">  def num_bikes</code>
         </li>
       
-        <li class="covered" data-hits="69" data-linenumber="49">
-          <span class="hits">69</span>
+        <li class="covered" data-hits="67" data-linenumber="49">
+          <span class="hits">67</span>
           
           <code class="ruby">    @working_bikes.count + @broken_bikes.count</code>
         </li>
@@ -651,8 +651,8 @@
           <code class="ruby">  def full?</code>
         </li>
       
-        <li class="covered" data-hits="65" data-linenumber="53">
-          <span class="hits">65</span>
+        <li class="covered" data-hits="64" data-linenumber="53">
+          <span class="hits">64</span>
           
           <code class="ruby">    num_bikes &gt;= capacity</code>
         </li>
@@ -675,8 +675,8 @@
           <code class="ruby">  def empty?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="57">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="57">
+          <span class="hits">3</span>
           
           <code class="ruby">    num_bikes.zero?</code>
         </li>
@@ -699,8 +699,8 @@
           <code class="ruby">  def broken_bikes_full?</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="61">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="14" data-linenumber="61">
+          <span class="hits">14</span>
           
           <code class="ruby">    @broken_bikes.count == BROKEN_BIKES_CAPACITY</code>
         </li>
@@ -1405,8 +1405,8 @@
           <code class="ruby">  def dock(bike)</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="14">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="61" data-linenumber="14">
+          <span class="hits">61</span>
           
           <code class="ruby">    subject.accept([bike])</code>
         </li>
@@ -1555,232 +1555,232 @@
           <code class="ruby">    it &#39;releases working bikes&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">      # dock(working_bike)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">      # dock(working_bike)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">      # dock(working_bike)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby">      # dock(working_bike)</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="43">
+        <li class="covered" data-hits="5" data-linenumber="39">
           <span class="hits">5</span>
           
           <code class="ruby">      4.times { dock(working_bike) }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="44">
-          <span class="hits">4</span>
-          
-          <code class="ruby">      3.times { dock(broken_bike) }</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
           <code class="ruby">      bikes = subject.release 4</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(bikes.size).to eq(4)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(bikes.map(&amp;:working?).all?).to eq(true)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;raises an error when the required number of bikes is not available&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="46">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      2.times { dock(working_bike) }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect { subject.release 2 }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">        .to raise_error &#39;Not enough working bikes available (requested [2]&#39;\</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    &quot;but have #{@working_bikes.count})&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;raises an error when there are no bikes available&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect { subject.release [working_bike] }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby">        .to raise_error &#39;No bikes available.&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
+        <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
           <code class="ruby">    it &#39;does not release broken bikes&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">      dock(broken_bike)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">      expect do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
           <code class="ruby">        subject.release [broken_bike]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">      end.to raise_error &#39;No working bikes available.&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
+        <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
           <code class="ruby">  describe &#39;#dock&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
           <code class="ruby">    it &#39;docks bikes returned by user&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(dock(working_bike)).to eq [working_bike]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
           <code class="ruby">    it &#39;raises an error when full&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="69">
+        <li class="covered" data-hits="21" data-linenumber="66">
           <span class="hits">21</span>
           
           <code class="ruby">      subject.capacity.times { dock(working_bike) }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="70">
+        <li class="covered" data-hits="2" data-linenumber="67">
           <span class="hits">2</span>
           
           <code class="ruby">      expect { dock(working_bike) }.to raise_error &#39;Docking station is full.&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="70">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
           <code class="ruby">  context &#39;when at capacity of broken bikes&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
           <code class="ruby">    before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="76">
+        <li class="covered" data-hits="2" data-linenumber="73">
           <span class="hits">2</span>
           
           <code class="ruby">      fill_with_broken_bikes</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;raises an error when attempting to dock another&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="76">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect { dock(broken_bike) }.to raise_error &#39;Call the repair team.&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
@@ -1792,58 +1792,40 @@
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;raises an error when attempting to dock another&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="79">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      expect { dock(broken_bike) }.to raise_error &#39;Call the repair team.&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="81">
-          <span class="hits">1</span>
-          
           <code class="ruby">    it &#39;releases a broken bike to the van&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
           <code class="ruby">      expect do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
           <code class="ruby">        subject.ship(1)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="84">
+        <li class="covered" data-hits="2" data-linenumber="81">
           <span class="hits">2</span>
           
           <code class="ruby">      end.to change { subject.broken_bikes.size }.by(-1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">end</code>
